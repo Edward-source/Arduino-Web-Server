@@ -11,7 +11,7 @@ By equipping an Arduino with an Ethernet shield you can turn it into a simple we
 Read the state of a switch (using simple HTML).
 
 * Control hardware from the webpage (using Javascript buttons).
-* Read value of a sensor (using simple HTML).
+
 
 ## Arduino Web Server Project Hardware
  
