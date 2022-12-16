@@ -1,184 +1,1232 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Junior Firmware Engineer | Dev</title>
+    <title>Windows 10 - Arduino Uno</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script src='js/main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
 </head>
+
 <body>
-    <header>
-       <nav>
-        
-       <!---- Profile picture-->
-       <div class="profile-picture">
-        <img src="images/picture.jpg" alt="Edward picture" width="80" height="80">
-       </div>
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="icons">
+            <div class="icons-left">
+                <a href="#start-menu-modal" id="start-menu"><i class="fab fa-windows"></i></a>
+                <a href="#search" id="search"></a>
+                <a href="#tabs" id="tabs-windows"></a>
+                <a href="#" class="px"></a>
+                <a href="#folder" id="folder" class="border"></a>
+                <a href="#chrome-pop-up" id="chrome" class="border"></a>
+            </div>
+            <div class="icons-right">
+                <a href="#up" id="up" class="small-icons"><i class="fas fa-chevron-up"></i></a>
+                <a href="#sound-modal" id="sound" class="small-icons"></a>
+                <a href="#wifi-modal" id="wifi" class="small-icons"></a>
+                <div class="datetime">
+                    <span class="hour">17:44</span>
+                    <span class="date">25/11/2022</span>
+                </div>
+                <a href="#notifications" id="notifications"><i class="far fa-bell"></i></a>
+                <a href="#" class="clear disabled"></a>
+                <a href="#" id="return"></a>
+            </div>
+        </div>
+    </div>
 
-        <!---Defining logo-->
-        <div class="logo">
-            <h4>Junior Firmware Engineer</h4>
+    <!-- Desktop -->
+    <div class="desktop">
+        <!-- Icons on the desktop -->
+        <div class="icons-dekstop">
+            <div class="icon-desktop">
+                <a href="#chrome-pop-up">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/chrome.png" alt="">
+                    <span>Chrome</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="#">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/code.png" alt="">
+                    <span>Code</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="#"><img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/file-explorer.png" alt=""><span>File Explorer</span></a>
+            </div>
+            <div class="icon-desktop">
+                <a href="#"><img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/word.png" alt=""><span>Recycle bin</span></a>
+            </div>
         </div>
 
-        <!--Navigation menu-->
-        <ul  class ="nav-links">
-            <li><a href="">Career Motivation</a></li>
-            <li><a href="">Skills and Technologies</a></li>
-            <li><a href="">Experience</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Qualifications</a></li>
-        </ul>
-
-        <!--burger-->
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line1"></div>
-            <div class="line1"></div>
+        <!-- Speakers -->
+        <div id="sound-modal">
+            <div class="sound-text">
+                <span>Speakers</span>
+            </div>
+            <div class="sound-progress">
+                <i class="fas fa-volume-up"></i>
+                <div class="bar-sound"></div>
+                <div class="bar-sound-drag"></div>
+                <span class="data-value">50%</span>
+            </div>
         </div>
-       </nav>
-    </header>
 
-    <main>
-      
-      <div class="mainframe">
-
-          <div class="sidebar">
-          </div>
-
-          <div class="views">
-              <section class="Introduction">
-                  <div class="text">
-                    <h3> // Hey, I'm Edward.</h3>
-                      
-                      < I am Firmware Engineer and Web Developer from
-                      South Africa, Cape Town. I create custom
-                      websites to help businesses do bettter />
-                  </div>
-
-                  <div class="photo">
-                      <img src="images/code-stable-white.png" alt="Girl in a jacket" width="200" height="600">
-                  </div>
-              </section>
-            
-              <section class="projects">
-                  <div class="projects-title"><h2>Projects</h2></div>
-                  <hr>
-                  <div class="projects-card">
-                      <div class="card">
-                          <img src="images/home.jfif" alt="Avatar" style="width:100%">
-                          <div class="container">
-                            <h4><b>Home Automation </b></h4>
-                            <p>University of Johannesburg (UJ)</p>
-                            <p>A smart home allows homeowners to control appliances, thermostats, lights, and other devices remotely using a smartphone or tablet through an internet connection. Smart homes can be set up through wireless or hardwired systems. Smart home technology provides homeowners with convenience and cost savings.</p>
-                          </div>
+        <!-- Wifi -->
+        <div id="wifi-modal">
+            <div class="list-networks">
+                <div class="networks">
+                    <div class="icons-wifi">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="text-wifi">
+                        <span class="name-wifi">Wifi</span>
+                        <span class="type-wifi">Connected, securised</span>
+                        <span class="propriety">Propriety</span>
+                        <button>Disconnect</button>
+                    </div>
+                </div>
+                <div class="networks">
+                    <div class="icons-wifi">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <span class="name-wifi">Wifi</span>
+                    <span class="type-wifi">Open</span>
+                </div>
+                <div class="networks">
+                    <div class="icons-wifi">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <span class="name-wifi">Wifi</span>
+                    <span class="type-wifi">Open</span>
+                </div>
+                <div class="options-wifi">
+                    <div class="options-wifi-text">
+                        <span>Options internet & security</span>
+                        <span>Modify options, for a better connection</span>
+                    </div>
+                    <div class="options-bloc">
+                        <div class="bloc-options">
+                            <i class="fas fa-wifi"></i>
+                            <span>Wifi</span>
                         </div>
-
-                        <div class="card">
-                          <img src="images/face.jfif" alt="Avatar" style="width:100%">
-                          <div class="container">
-                            <h4><b>Facial Recognition</b></h4>
-                            <p>Council for Scientific and Industrial Research (CSIR)</p>
-                            <p>A facial recognition system is a technology capable of matching a human face from a digital image or a video frame against a database of faces, typically employed to authenticate users through ID verification services, works by pinpointing and measuring facial features from a given image.</p>
-                          </div>
+                        <div class="bloc-options">
+                            <i class="fas fa-plane"></i>
+                            <span>Plane mode</span>
                         </div>
-
-                        <div class="card">
-                          <img src="images/api.jfif" alt="Avatar" style="width:100%">
-                          <div class="container">
-                            <h4><b>Restful API</b></h4>
-                            <p>Architect & Engineer</p>
-                            <p>An API, or application programming interface, is a set of rules that define how applications or devices can connect to and communicate with each other. A REST API is an API that conforms to the design principles of the REST, or representational state transfer architectural style. For this reason, REST APIs are sometimes referred to RESTful APIs.</p>
-                          </div>
+                        <div class="bloc-options">
+                            <i class="fab fa-bluetooth-b"></i>
+                            <span>Bluetooth</span>
                         </div>
-                  </div>
-              </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-              <!----Skills and Tech section-->
-              <section class="Experience">
-                <div class="projects-title"><h2>Skills and Technologies</h2></div>
-                  <hr>
-
-                          <div class="skills-bar">
-
-                            <div class="bar">
-                                 <div class="info"><span>HTML/CSS</span> </div>
-                                <div class="progress-line html"><span></span></div>
+    <!-- Chrome -->
+    <div class="chrome" id="chrome-pop-up">
+        <div class="pop-up">
+            <!-- Taskbar chrome-->
+            <!-- Top -->
+            <div class="chrome-top">
+                <div class="chrome-tabs">
+                    <div class="triangle"></div>
+                    <div class="tabs">
+                        <span class="icons-tabs">
+                          <i class="fab fa-codepen"></i>
+                      </span>
+                        <span class="text-tabs">CodePen</span>
+                        <span class="close-tabs">x</span>
+                    </div>
+                    <div class="triangle-2"></div>
+                    <div class="new-tabs"></div>
+                </div>
+                <div class="chrome-close">
+                    <a href="#"><i class="fas fa-minus"></i></a>
+                    <a href="#"><i class="far fa-window-restore"></i></a>
+                    <a href="#"><i class="fas fa-times"></i></a>
+                </div>
+            </div>
+            <!-- Bottom -->
+            <div class="chrome-bottom">
+                <div class="options-bar">
+                    <div class="icons-bar">
+                        <div class="arrows">
+                            <a href="#"><i class="fas fa-arrow-left"></i></a>
+                            <a href="#"><i class="fas fa-arrow-right"></i></a>
+                            <a href="#"><i class="fas fa-sync"></i></a>
+                        </div>
+                        <div class="search-bar">
+                            <span class="info"><i class="fas fa-lock"></i> Securised</span>
+                            <input type="text" value="https://codepen.io/gcazin">
+                            <span class="star"><i class="far fa-star"></i></span>
+                        </div>
+                        <div class="points-bar">
+                            <div class="points">
+                                <span>•</span>
+                                <span>•</span>
+                                <span>•</span>
                             </div>
-
-                            <div class="bar">
-                              <div class="info"><span>C/C++</span> </div>
-                             <div class="progress-line C-Cplusplus"><span></span></div>
-                             </div>
-
-
-                            <div class="bar">
-                                <div class="info">
-                                  <span>JAVASCRIPT</span>
-                                </div>
-
-                            <div class="progress-line javascript"><span></span></div>
-                              </div>
-
-                          <div class="bar">
-                              <div class="info">
-                                <span>Electronics</span>
-                          </div>
-                             <div class="progress-line Electronics"><span></span></div>
-                            </div>
-
-
-                          <div class="bar">
-                              <div class="info">
-                                <span>PYTHON</span>
-                              </div>
-                          <div class="progress-line python"><span></span></div>
-                          </div>
-                          
-
-                          <div class="bar">
-                              <div class="info">
-                                <span>MYSQL</span>
-                          </div>
-                          <div class="progress-line mysql"><span></span></div>
-                          </div>
-                              
-                      </div>
-              </section>
-
-
-              <!---------Experience section-->
-              <section  class="Experience">
-                <div class="projects-title"><h2>Experience</h2></div>
-                  <hr>
-                  <h4>Firmware Engineer (Engineer in Training)</h4>
-                  <h4>MiX Temelatics</h4> 
-
-                  <div class="data-place">
-                    <div class="date"><img src="images/calendar.png" alt="Avatar" width="20px" height="20px"> 01 May 2022 - Present</div>
-                    <div class="location">Stellenbosch</div>
-                  </div>
-                  <ul>
-                    <li>Reverse engineering of vehicle CAN signals and developing CAN scripts to enable on-board computers to interpret signal data and derive valuable information </li>
-                    <li>Develop scripts to enable on-board computers to interface with off-the-shelf sensors </li>
-                    <li>Maintain and develop software tools including tools that interface with CAN loggers and automate the reverse engineering process where possible </li>
-                    <li>Participate in design and quality reviews </li>
-                    <li>Firmware development training: Learn to develop embedded C code that provides core functionality to the on-board computer </li>
-                  </ul>
-
-              </section>
-
+                        </div>
+                    </div>
+                    <div class="bookmarks">
+                        <div class="folder-book">
+                            <a target="_blank" href="https://purecss.io/"><span>P</span> Pure</a>
+                        </div>
+                        <div class="folder-book">
+                            <a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS"><i class="fab fa-css3-alt"></i> CSS</a>
+                        </div>
+                        <div class="folder-book">
+                            <a target="_blank" href="https://www.microsoft.com/fr-fr/windows"><i class="fab fa-windows"></i> Windows 10</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bookmarks -->
 
             </div>
-      </div>
-    </main>
+            <iframe src="https://codepen.io/gcazin" frameborder="0" width="895px" height="404px"></iframe>
+        </div>
+    </div>
 
-    <footer>
-        
-    </footer>
-    
+    <!-- Start menu -->
+    <div id="start-menu-modal">
+        <div id="user">
+            <a class="push" href="#"><i class="fas fa-bars"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="#"><i class="fas fa-cog"></i></a>
+            <a href="#"><i class="fas fa-power-off"></i></a>
+        </div>
+        <div id="apps">
+            <a class="category" href="#">&</a>
+            <a href="#"><img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/access.png" alt="access"> <span>Access</span></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/sublime-text.png" alt="sublime"> <span>Sublime text 3</span></a>
+        </div>
+        <div id="others">
+            <div class="title-others">
+                Office 365
+            </div>
+            <div class="box-others">
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/word.png" alt="">
+                    <span>Word</span>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/excel.png" alt="">
+                    <span>Excel</span>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/powerpoint.png" alt="">
+                    <span>Powerpoint</span>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/outlook.png" alt="">
+                    <span>Outlook</span>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/publisher.png" alt="">
+                    <span>Publisher</span>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/onenote.png" alt="">
+                    <span>OneNote</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<style>
+    /* ==========================================================================
+    General
+========================================================================== */
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .desktop {
+        height: 100vh;
+        background: url(https://images.frandroid.com/wp-content/uploads/2019/12/windows-10-wallpaper.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    /* ==========================================================================
+    Taskbar
+========================================================================== */
+    
+    .taskbar {
+        position: fixed;
+        bottom: 0;
+        height: 43px;
+        width: 100%;
+        background: #004172;
+    }
+    
+    .taskbar .icons-left {
+        height: 43px;
+        display: inline-block;
+    }
+    
+    .taskbar .icons-left #start-menu,
+    .taskbar .icons-left #tabs-windows {
+        height: 43px;
+        width: 48px;
+        position: relative;
+    }
+    
+    .taskbar .icons-left #start-menu i,
+    .taskbar .icons-left #tabs-windows i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 21px;
+        color: white;
+    }
+    
+    .taskbar .icons-left #search {
+        height: 43px;
+        width: 49px;
+        background-image: url("https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/search.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 22px 22px;
+    }
+    
+    .taskbar .icons-left #folder {
+        height: 43px;
+        width: 49px;
+        background-image: url("http://www.iconarchive.com/download/i98291/dakirby309/simply-styled/File-Explorer.ico");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 21px 21px;
+        background-size: 24px 21px;
+    }
+    
+    .taskbar .icons-left #chrome {
+        height: 43px;
+        width: 49px;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/2048px-Google_Chrome_icon_%28September_2014%29.svg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 26px 26px;
+    }
+    
+    .taskbar .icons-left #tabs-windows {
+        height: 43px;
+        width: 49px;
+        background-image: url("https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/switch-window.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px 25px;
+    }
+    
+    .taskbar .icons-left #tabs-windows:hover {
+        height: 43px;
+        width: 49px;
+        background-image: url("https://image.noelshack.com/fichiers/2018/18/5/1525467821-tabs.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px 15px;
+        background-size: 28px 15px;
+    }
+    
+    .taskbar .icons-left a {
+        display: table-cell;
+        border-bottom: 2px solid transparent;
+    }
+    
+    .taskbar .icons-left a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .taskbar .icons-left a:not(:first-child) {
+        margin-left: -4px;
+    }
+    
+    .taskbar .icons-left a.border:focus {
+        border-bottom: 2px solid rgba(245, 245, 245, 0.651);
+    }
+    
+    .taskbar .icons-left .px {
+        width: 1px;
+    }
+    
+    .taskbar .icons-left .px a {
+        pointer-events: none;
+    }
+    
+    .taskbar .icons-right {
+        height: 43px;
+        float: right;
+    }
+    
+    .taskbar .icons-right #wifi {
+        height: 43px;
+        width: 49px;
+        background-image: url("https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/wifi.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 22px 22px;
+    }
+    
+    .taskbar .icons-right #sound {
+        height: 43px;
+        width: 49px;
+        background-image: url("https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/volume.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 22px 22px;
+    }
+    
+    .taskbar .icons-right #return {
+        width: 4px;
+        border-left: 1px solid grey;
+    }
+    
+    .taskbar .icons-right #notifications,
+    .taskbar .icons-right #up {
+        height: 43px;
+        width: 42px;
+        position: relative;
+    }
+    
+    .taskbar .icons-right #notifications i,
+    .taskbar .icons-right #up i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 17px;
+        color: white;
+    }
+    
+    .taskbar .icons-right .clear {
+        height: 43px;
+        width: 7px;
+        display: table-cell;
+    }
+    
+    .taskbar .icons-right .disabled {
+        pointer-events: none;
+        cursor: default;
+    }
+    
+    .taskbar .icons-right .datetime {
+        display: table-cell;
+        width: 70px !important;
+        cursor: pointer;
+        padding-top: 3px;
+    }
+    
+    .taskbar .icons-right .datetime span {
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 11.3px;
+        color: white;
+    }
+    
+    .taskbar .icons-right .datetime:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .taskbar .icons-right a {
+        display: table-cell;
+    }
+    
+    .taskbar .icons-right a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .taskbar .icons-right a:not(:first-child) {
+        margin-left: -4px;
+    }
+    
+    .taskbar .icons-right .small-icons {
+        width: 24px !important;
+    }
+    /* ==========================================================================
+    Desktop
+========================================================================== */
+    
+    .desktop {
+        display: flex;
+    }
+    
+    .desktop .icon-desktop {
+        padding: 4px 8px 4px 8px;
+        border: 2px solid transparent;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    
+    .desktop .icon-desktop a {
+        display: block;
+        text-decoration: none;
+        cursor: default;
+    }
+    
+    .desktop .icon-desktop img {
+        height: 48px;
+        width: 48px;
+    }
+    
+    .desktop .icon-desktop span {
+        display: block;
+        color: white;
+        font-size: 11px;
+        text-align: center;
+    }
+    
+    .desktop .icon-desktop:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .desktop .icon-desktop:first-child {
+        margin-top: 5px;
+    }
+    
+    .desktop #sound-modal {
+        background: #005a9e;
+        position: absolute;
+        right: 0;
+        bottom: 43px;
+        height: 100px;
+        width: 380px;
+        visibility: hidden;
+    }
+    
+    .desktop #sound-modal i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        left: -20px !important;
+        color: whitesmoke;
+    }
+    
+    .desktop #sound-modal span.data-value {
+        position: absolute;
+        top: 50%;
+        right: -40px;
+        transform: translateY(-50%);
+        color: whitesmoke;
+    }
+    
+    .desktop #sound-modal .sound-text {
+        text-align: center;
+        margin-top: 15px;
+        color: whitesmoke;
+    }
+    
+    .desktop #sound-modal .sound-progress {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 70%;
+    }
+    
+    .desktop #sound-modal .sound-progress .bar-sound {
+        width: 230px;
+        height: 5px;
+        background: linear-gradient(to right, #2989d8 0%, #2989d8 50%, grey 51%, grey 51%);
+    }
+    
+    .desktop #sound-modal .sound-progress .bar-sound-drag {
+        height: 20px;
+        width: 7px;
+        background: #0078d7;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 3px;
+    }
+    
+    .desktop #sound-modal:target {
+        visibility: visible;
+        animation-name: open-height;
+        animation-duration: 0.1s;
+        transition: 0.1s;
+    }
+    
+    @keyframes open-height {
+        0% {
+            height: 50px;
+            opacity: 0.5;
+        }
+        100% {
+            height: 100px;
+            opacity: 1;
+        }
+    }
+    
+    .desktop #sound-modal:hover .bar-sound-drag {
+        background: white;
+    }
+    /* Wifi */
+    
+    #wifi-modal {
+        background: #005a9e;
+        position: absolute;
+        right: 0;
+        bottom: 43px;
+        height: 600px;
+        width: 380px;
+        color: white;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #wifi-modal:target {
+        visibility: visible !important;
+        animation-name: open;
+        animation-duration: 0.1s;
+        transition: 0.1s;
+    }
+    
+    @keyframes open {
+        0% {
+            height: 550px;
+            opacity: 0.5;
+        }
+        100% {
+            height: 600px;
+            opacity: 1;
+        }
+    }
+    
+    #wifi-modal .list-networks .networks {
+        padding: 20px;
+        cursor: default;
+    }
+    
+    #wifi-modal .list-networks .networks i {
+        transform: rotate(45deg);
+        font-size: 25px;
+    }
+    
+    #wifi-modal .list-networks .networks:first-child {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    #wifi-modal .list-networks .networks:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+    
+    #wifi-modal .list-networks .networks span.name-wifi {
+        font-size: 18px;
+    }
+    
+    #wifi-modal .list-networks .networks span.type-wifi {
+        display: block;
+        font-size: 15px;
+        color: rgba(245, 245, 245, 0.644);
+    }
+    
+    #wifi-modal .list-networks .networks .text-wifi {
+        display: inline-block;
+        position: relative;
+        width: 80%;
+    }
+    
+    #wifi-modal .list-networks .networks .icons-wifi {
+        float: left;
+        padding: 10px 10px 0px 0px;
+        margin-right: 15px;
+    }
+    
+    #wifi-modal .list-networks .networks .propriety {
+        font-size: 15px;
+        color: rgba(245, 245, 245, 0.6);
+        display: block;
+        margin-top: 10px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    #wifi-modal .list-networks .networks .propriety:hover {
+        color: rgba(245, 245, 245, 0.9);
+    }
+    
+    #wifi-modal .list-networks .networks button {
+        display: block;
+        color: white;
+        background: #338ed6;
+        border: 2px solid transparent;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 15px;
+        float: right;
+        margin-top: 10px;
+    }
+    
+    #wifi-modal .list-networks .networks button:hover {
+        border: 2px solid rgba(255, 255, 255, 0.63);
+    }
+    
+    #wifi-modal .list-networks .networks button:focus {
+        background: #66aae0;
+        outline: none;
+        border: 2px solid transparent;
+    }
+    
+    #wifi-modal .list-networks .options-wifi {
+        position: absolute;
+        bottom: 0;
+    }
+    
+    #wifi-modal .list-networks .options-wifi .options-bloc {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #wifi-modal .list-networks .options-wifi .options-bloc .bloc-options {
+        height: 75px;
+        width: 95px;
+        background: rgba(255, 255, 255, 0.1);
+        margin: 10px 0px 5px 6px;
+        position: relative;
+        border: 2px solid transparent;
+        cursor: default;
+    }
+    
+    #wifi-modal .list-networks .options-wifi .options-bloc .bloc-options i {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+    }
+    
+    #wifi-modal .list-networks .options-wifi .options-bloc .bloc-options span {
+        display: block;
+        position: absolute;
+        bottom: 3px;
+        left: 5px;
+        font-size: 14px;
+    }
+    
+    #wifi-modal .list-networks .options-wifi .options-bloc .bloc-options:first-child {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    
+    #wifi-modal .list-networks .options-wifi .options-bloc .bloc-options:hover {
+        border: 2px solid rgba(255, 255, 255, 0.63);
+    }
+    
+    #wifi-modal .list-networks .options-wifi .options-wifi-text {
+        margin-left: 6px;
+    }
+    
+    #wifi-modal .list-networks .options-wifi .options-wifi-text span {
+        display: block;
+        font-size: 14px;
+        color: rgba(245, 245, 245, 0.8);
+    }
+    
+    #wifi-modal .list-networks .options-wifi .options-wifi-text span:first-child {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    #wifi-modal .list-networks .options-wifi .options-wifi-text span:not(:first-child) {
+        font-size: 12px;
+        cursor: default;
+    }
+    
+    #start-menu-modal {
+        background: #005a9e;
+        position: absolute;
+        left: 0;
+        bottom: 43px;
+        height: 600px;
+        color: white;
+        visibility: hidden;
+        display: grid;
+        grid-template-columns: 50px 250px 400px;
+        cursor: default;
+    }
+    
+    #start-menu-modal:target {
+        visibility: visible !important;
+        animation-name: open;
+        animation-duration: 0.1s;
+        transition: 0.1s;
+    }
+    
+    @keyframes open {
+        0% {
+            height: 550px;
+            opacity: 0.5;
+        }
+        100% {
+            height: 600px;
+            opacity: 1;
+        }
+    }
+    
+    #start-menu-modal #user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #start-menu-modal #user a {
+        color: whitesmoke;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        cursor: default;
+    }
+    
+    #start-menu-modal #user a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    #start-menu-modal #user .push {
+        margin-bottom: auto;
+    }
+    
+    #start-menu-modal #apps {
+        display: flex;
+        flex-direction: column;
+        overflow-y: visible;
+        padding: 10px;
+    }
+    
+    #start-menu-modal #apps a {
+        color: whitesmoke;
+        display: flex;
+        text-decoration: none;
+        padding: 2px 10px 0px 20px;
+        line-height: 2.5;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        cursor: default;
+    }
+    
+    #start-menu-modal #apps a img {
+        height: 30px;
+        width: 30px;
+        padding: 4px;
+    }
+    
+    #start-menu-modal #apps a img[alt="sublime"] {
+        background: #292929;
+    }
+    
+    #start-menu-modal #apps a img[alt="access"] {
+        background: #7c2325;
+    }
+    
+    #start-menu-modal #apps a i {
+        font-size: 25px;
+        line-height: 1.1;
+    }
+    
+    #start-menu-modal #apps a span {
+        margin-left: 8px;
+        color: whitesmoke;
+    }
+    
+    #start-menu-modal #apps a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    #start-menu-modal #apps a.category {
+        height: 30px;
+    }
+    
+    #start-menu-modal #others .title-others {
+        color: whitesmoke;
+        text-decoration: none;
+        padding: 10px 10px 0px 20px;
+        line-height: 2.5;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    
+    #start-menu-modal #others .box-others {
+        display: inline-flex;
+        padding-left: 20px;
+        flex-wrap: wrap;
+    }
+    
+    #start-menu-modal #others .box-others .box {
+        height: 100px;
+        width: 100px;
+        position: relative;
+        background: #0078d7;
+        margin-left: 4px;
+        border: 2px solid transparent;
+        margin-bottom: 4px;
+    }
+    
+    #start-menu-modal #others .box-others .box img {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #start-menu-modal #others .box-others .box span {
+        position: absolute;
+        bottom: 3px;
+        left: 4px;
+        font-size: 12px;
+    }
+    
+    #start-menu-modal #others .box-others .box:hover {
+        border: 2px solid #7fbbeb;
+    }
+    /* ==========================================================================
+    Chrome
+========================================================================== */
+    
+    #chrome-pop-up {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 500px;
+        width: 900px;
+        background: white;
+        visibility: hidden;
+        border: 2px solid #004275;
+        z-index: 1;
+        resize: both;
+        overflow-y: hidden;
+    }
+    
+    #chrome-pop-up:target {
+        visibility: visible;
+    }
+    
+    #chrome-pop-up iframe {
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .chrome-top {
+        height: 30px;
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid grey;
+    }
+    
+    .chrome-tabs {
+        float: left;
+        position: relative;
+        margin-left: 12px;
+    }
+    
+    .chrome-tabs .tabs {
+        padding-top: 6px;
+        padding-left: 12px;
+        padding-right: 6px;
+        padding-bottom: 6px;
+        width: 180px;
+        background: #f2f2f2;
+        cursor: default;
+    }
+    
+    .chrome-tabs .tabs .text-tabs {
+        font-size: 12px;
+        margin-left: 3px;
+        vertical-align: text-bottom;
+    }
+    
+    .chrome-tabs .tabs .close-tabs {
+        float: right;
+        margin-right: 10px;
+        height: 15px;
+        width: 15px;
+        text-align: center;
+        line-height: 0.9;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 50%;
+        font-weight: 500;
+        font-family: monospace;
+    }
+    
+    .chrome-tabs .tabs .close-tabs:hover {
+        background: rgba(255, 0, 0, 0.781);
+        color: white;
+        padding: 1px;
+    }
+    
+    .chrome-tabs .tabs:before {
+        content: " ";
+        position: absolute;
+        left: -33px;
+        bottom: 0;
+        background: grey;
+        width: 64px;
+        height: 1px;
+        transform: rotate(104deg);
+    }
+    
+    .chrome-tabs .tabs:after {
+        content: " ";
+        position: absolute;
+        right: -31px;
+        bottom: 0;
+        background: grey;
+        width: 64px;
+        height: 1px;
+        transform: rotate(70deg);
+    }
+    
+    .chrome-tabs .tabs .icons-tabs img {
+        height: 16px;
+        width: 16px;
+    }
+    
+    .new-tabs {
+        width: 26px;
+        height: 15px;
+        background: #ccc;
+        transform: skew(27deg);
+        position: absolute;
+        top: 7px;
+        right: -30px;
+        border: 1px solid grey;
+        border-radius: 2px;
+    }
+    
+    .new-tabs:hover {
+        background: rgba(128, 128, 128, 0.3);
+    }
+    
+    .chrome-close {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .chrome-close a {
+        text-decoration: none;
+        font-size: 11px;
+        padding: 8px 24px 7px 24px;
+        color: grey;
+    }
+    
+    .chrome-close a:hover:not(:last-child) {
+        background: #dfdfdf;
+        color: black;
+    }
+    
+    .chrome-close a:hover:last-child {
+        background: rgba(255, 0, 0, 0.781);
+        color: white;
+    }
+    
+    .chrome-close a:not(:first-child) {
+        margin-left: -4px;
+    }
+    
+    .triangle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 0px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 7px solid white;
+    }
+    
+    .triangle-2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 0px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 10px solid white;
+        transform: scaleX(-1);
+    }
+    
+    .chrome-bottom {
+        background: #f2f2f2;
+        height: 62px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .chrome-bottom .options-bar {
+        height: calc(62px / 2);
+        width: 100%;
+    }
+    
+    .chrome-bottom .options-bar a {
+        text-decoration: none;
+        border-radius: 3px;
+    }
+    
+    .chrome-bottom .options-bar a:hover {
+        background: #dfdfdf;
+    }
+    
+    .chrome-bottom .options-bar .icons-bar {
+        padding: 3px;
+        margin-left: 4px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .chrome-bottom .options-bar .icons-bar .arrows {
+        flex: 0 0 85px;
+        flex-direction: row;
+        align-self: center;
+    }
+    
+    .chrome-bottom .options-bar .icons-bar .arrows a {
+        color: #5a5a5a;
+        padding: 4px;
+    }
+    
+    .chrome-bottom .options-bar .search-bar {
+        width: 100%;
+    }
+    
+    .chrome-bottom .options-bar .search-bar input {
+        border: 1px solid grey;
+        border-radius: 4px;
+        padding: 8px;
+        width: 100%;
+        text-indent: 87px;
+    }
+    
+    .chrome-bottom .options-bar .search-bar input:focus {
+        outline: none;
+    }
+    
+    .chrome-bottom .options-bar .search-bar .info {
+        position: absolute;
+        font-size: 12px;
+        color: #27ae60;
+        border-right: 1px solid rgba(128, 128, 128, 0.808);
+        padding: 9px;
+        cursor: default;
+    }
+    
+    .chrome-bottom .options-bar .search-bar .info:hover {
+        background: rgba(128, 128, 128, 0.2);
+    }
+    
+    .chrome-bottom .options-bar .search-bar .star {
+        position: absolute;
+        font-size: 12px;
+        color: grey;
+        padding: 6px;
+        top: 5px;
+        right: 27px;
+        border-radius: 2px;
+        cursor: default;
+    }
+    
+    .chrome-bottom .options-bar .search-bar .star:hover {
+        background: rgba(128, 128, 128, 0.2);
+    }
+    
+    .chrome-bottom .options-bar .points-bar {
+        border-radius: 3px;
+    }
+    
+    .chrome-bottom .options-bar .points-bar a {
+        color: #5a5a5a;
+    }
+    
+    .chrome-bottom .options-bar .points-bar .points {
+        display: inline-flex;
+        transform: rotate(90deg);
+        cursor: default;
+        color: grey;
+        margin-top: 6px;
+        border-radius: 3px;
+    }
+    
+    .chrome-bottom .options-bar .points-bar:hover {
+        background: rgba(128, 128, 128, 0.2);
+    }
+    
+    .chrome-bottom .bookmarks {
+        flex: 0 0 24%;
+        background: #f2f2f2;
+    }
+    
+    .chrome-bottom .bookmarks .folder-book {
+        cursor: default;
+        border-radius: 1px;
+        display: inline;
+    }
+    
+    .chrome-bottom .bookmarks .folder-book a {
+        font-size: 12px;
+        padding-right: 8px;
+        color: rgba(0, 0, 0, 0.836);
+        cursor: default;
+        padding-bottom: 3px;
+    }
+    
+    .chrome-bottom .bookmarks .folder-book i {
+        padding: 1px 8px 0px 10px;
+        font-size: 16px;
+        vertical-align: bottom;
+    }
+    
+    .chrome-bottom .bookmarks .folder-book i.fa-css3-alt {
+        color: #1b73ba;
+    }
+    
+    .chrome-bottom .bookmarks .folder-book i.fa-windows {
+        color: grey;
+    }
+    
+    .chrome-bottom .bookmarks .folder-book:hover {
+        background: #dfdfdf;
+    }
+    
+    .chrome-bottom .bookmarks .folder-book:first-child {
+        margin-left: 4px;
+    }
+    
+    .chrome-bottom .bookmarks .folder-book:first-child a {
+        vertical-align: baseline;
+    }
+    
+    .chrome-bottom .bookmarks .folder-book span {
+        background: #1f8dd6;
+        padding: 1px 3px 0px 3px;
+        font-size: 13px;
+        color: white;
+        vertical-align: text-top;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+</style>
+
 </html>

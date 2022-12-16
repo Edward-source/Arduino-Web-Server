@@ -1,7 +1,7 @@
 import requests as r
 import json
 
-server_url = "http://192.168.1.50:80"
+server_url = "http://"
 
 class Client():
 
