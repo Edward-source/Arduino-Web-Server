@@ -24,3 +24,8 @@ Arduino Web Server Board Connections
 The Ethernet shield connects the Arduino to the Internet. The setup is very simple: just plug the header pins of the shield into your Arduino, then connect an Ethernet cable to the shield.  The image below shows this setup:
 
 
+# Windows 10 UI from Arduino UNO
+
+![image](https://user-images.githubusercontent.com/66918213/208175066-3cdfffd5-1914-4ea1-82c3-1f8e2431ab3f.png)
+
+
